@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins Scheduling Builds</title>
+</head>
+<body>
+
+    <h1>Jenkins Scheduling Builds</h1>
+
+    <h2>Poll SCM</h2>
+    <ol>
+        <li>Go to Jenkins dashboard &gt; Job &gt; Configure.</li>
+        <li>Enable "Poll SCM" under "Build Triggers".</li>
+        <li>Enter schedule (e.g., <code>H/15 * * * *</code> for every 15 minutes).</li>
+    </ol>
+
+    <h2>Build Periodically</h2>
+    <ol>
+        <li>Go to Jenkins dashboard &gt; Job &gt; Configure.</li>
+        <li>Enable "Build periodically" under "Build Triggers".</li>
+        <li>Enter schedule (e.g., <code>H 2 * * 1-5</code> for 2 AM, Mon-Fri).</li>
+    </ol>
+
+    <h2>Cron Schedule Examples</h2>
+    <ul>
+        <li>Every 15 minutes: <code>H/15 * * * *</code></li>
+        <li>Daily at midnight: <code>H H * * *</code></li>
+        <li>Every weekday at 2 AM: <code>H 2 * * 1-5</code></li>
+    </ul>
+
+</body>
+</html>
